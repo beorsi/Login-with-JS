@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather&family=Oswald:wght@600&family=Roboto+Slab:wght@100..900&family=Ubuntu&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <input type="button" value="LOGIN/CADASTRO" onclick="modal()" id="btn">
+    </header>
+    <div id="main">
+        <div id="overlay"></div>
+        <div id="modl">
+            <div class="lbl">
+                <label for="nome">Nome:</label>
+            </div>
+            <div>
+                <input type="text" id="nome">
+            </div>
+            <div class="lbl">
+                <label for="mail">Email:</label>
+            </div>
+            <div>
+                <input type="text" id="mail" onblur="validateEmail()">
+            </div>
+            <div class="lbl">
+                <label for="tel">Telefone:</label>
+            </div>
+            <div>
+                <input type="text" id="tel" oninput="telMask()" maxlength="14">
+            </div>
+            <div class="lbl">
+                <label for="cpf">Cpf:</label>
+            </div>
+            <div>
+                <input type="text" id="Cpf" oninput="MascCPF()" maxlength="14">
+            </div>
+            <div class="lbl">
+                <label for="pass">
+                    Senha:
+                </label>
+                <input type="password" id="pass" onblur="maskPassword()">
+            </div>
+            <div>
+            </div>
+            <div></div>
+            <div>
+                <input type="button" value="Concluir cadastro!" id="btnFim" onclick="change()">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
